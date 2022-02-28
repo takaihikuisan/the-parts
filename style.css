@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #eff0f2;
+}
+
+.main-container {
+  height: 100vh;
+}
+
+.parts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.parts-title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.contents {
+  margin-bottom: 5rem;
+}
+
+.contents img {
+  width: 45%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.parts-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80vh;
+}
