@@ -1,0 +1,246 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101d;
+  padding: 6px 14px;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active {
+  width: 240px;
+}
+
+.logo-content {
+  color: #fff;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  opacity: 0;
+}
+
+.sidebar.active .logo {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.logo ion-icon {
+  font-size: 28px;
+  margin: 0 5px;
+}
+
+.logo-icon {
+  font-size: 40px;
+}
+
+#btn {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  font-size: 10px;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+}
+
+.sidebar.active #btn {
+  left: 90%;
+}
+
+.sidebar ul {
+  margin-top: 20px;
+  position: relative;
+}
+
+.sidebar ul li {
+  position: relative;
+  list-style: none;
+  height: 50px;
+  width: 100%;
+  margin: 0 5px;
+  line-height: 50px;
+}
+
+.sidebar ul li .tooltip {
+  position: absolute;
+  left: 122px;
+  background: #fff;
+  height: 35px;
+  width: 122px;
+  top: 0;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 35px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: 0s;
+  pointer-events: none;
+}
+
+.sidebar.active ul li .tooltip {
+  display: none;
+}
+
+.sidebar ul li:hover .tooltip {
+  transition: all 0.5s ease;
+  opacity: 1;
+  top: 50%;
+}
+
+input {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background: #1d1b31;
+  padding-left: 50px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.search-icon {
+  position: absolute;
+  color: #fff;
+  z-index: 99;
+  font-size: 22px;
+  left: 0%;
+  top: 5px;
+  transition: all 0.5s ease;
+}
+
+.search-icon:hover {
+  background: #fff;
+  color: #1d1b31;
+  top: -1px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  border-radius: 12px;
+}
+
+.sidebar ul li a:hover {
+  color: #11101d;
+  background-color: #fff;
+}
+
+.sidebar ul li span {
+  height: 50px;
+  min-width: 50px;
+  line-height: 50px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.sidebar.sidebar .links-name {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar.sidebar.active .links-name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.profile-content {
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.profile {
+  position: relative;
+  padding: 10px 6px;
+  height: 60px;
+  background: #1d1b31;
+}
+
+.profile-details {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar.active .profile-details {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.person-icon {
+  height: 45px;
+  width: 45px;
+  border-radius: 12px;
+  font-size: 35px;
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.job {
+  font-size: 12px;
+}
+
+.log-in {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-50%);
+  min-width: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.sidebar.active .log-in {
+  left: 88%;
+}
+
+.home-content {
+  position: absolute;
+  height: 100%;
+  width: calc(100%-240px);
+  left: 240px;
+}
+
+.text {
+  font-size: 25px;
+  font-weight: 500;
+  color: #1d1b31;
+  margin-top: 12px;
+}

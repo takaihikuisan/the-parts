@@ -5,16 +5,21 @@
   background-color: #eff0f2;
 }
 
+h2 {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  padding-bottom: 1rem;
+}
+
 .main-container {
   height: 100vh;
 }
 
 .parts-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
+  padding: 0 2rem;
 }
 
 .parts-title {
@@ -27,14 +32,27 @@
 }
 
 .contents img {
-  width: 45%;
+  width: 100%;
+  padding: 1rem;
   height: auto;
   border-radius: 5px;
+  transition: 0.5s;
 }
 
-.parts-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 80vh;
+.contents img:hover {
+  transform: translateY(-10px);
+}
+
+.parts-content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 5rem;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .parts-content {
+    grid-template-columns: 100%;
+  }
 }
