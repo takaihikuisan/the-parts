@@ -33,10 +33,10 @@ h3 {
 
 .contents img {
   width: 100%;
-  padding: 1rem;
   height: auto;
-  border-radius: 5px;
   transition: 0.5s;
+  border: 1px solid #fff;
+  border-radius: 10px;
 }
 
 .contents img:hover {
@@ -46,6 +46,7 @@ h3 {
 .parts-content {
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-column-gap: 1rem;
   margin-bottom: 5rem;
   width: 100%;
   text-align: center;
